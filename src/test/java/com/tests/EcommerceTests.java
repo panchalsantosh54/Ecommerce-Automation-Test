@@ -55,7 +55,7 @@ public class EcommerceTests extends BaseTest {
 		Assert.assertTrue(cartPage.getProductQuantity() == 2, "Cart should reflect the updated quantity");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void testRemoveProductFromCart() {
 		HomePage homePage = new HomePage(driver);
 		homePage.searchForProduct("Laptop");

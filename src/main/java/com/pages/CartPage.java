@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CartPage extends BasePage {
 
-	private By cartQuantityDropdown = By.name("quantity");
+	private By cartQuantityDropdown = By.xpath("//span[@class='a-button-text a-declarative']");
 	private By cartItemCount = By.cssSelector("span[id='nav-cart-count']");
 	private By deleteButton = By.cssSelector("img[alt='Delete']");
 
@@ -20,11 +20,11 @@ public class CartPage extends BasePage {
 	}
 
 	public boolean isProductInCart() {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(cartItemCount)); 
-	    return driver.findElements(cartItemCount).size() > 0;
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cartItemCount));
+		return driver.findElements(cartItemCount).size() > 0;
+
 //		return !driver.findElements(cartItemCount).isEmpty()
 //				&& Integer.parseInt(driver.findElement(cartItemCount).getText()) > 0;
 	}
@@ -32,22 +32,44 @@ public class CartPage extends BasePage {
 	public void updateProductQuantity(int quantity) {
 //		driver.findElement(cartQuantityDropdown).sendKeys(String.valueOf(quantity));
 
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cartItemCount));
+
 		WebElement quantityDropdownElement = driver.findElement(cartQuantityDropdown);
-		Select quantityDropdown = new Select(quantityDropdownElement);
-		quantityDropdown.selectByValue(String.valueOf(quantity));
+		quantityDropdownElement.click();
+
+		/*
+		 * Select quantityDropdown = new Select(quantityDropdownElement);
+		 * quantityDropdown.selectByValue(String.valueOf(quantity));
+		 */
+//		quantityDropdown.selectByVisibleText(String.valueOf(quantity));
 	}
 
 	public int getProductQuantity() {
 		WebElement quantityDropdownElement = driver.findElement(cartQuantityDropdown);
-		Select quantityDropdown = new Select(quantityDropdownElement);
-		String selectedValue = quantityDropdown.getFirstSelectedOption().getText();
-		return Integer.parseInt(selectedValue);
+		
+		/*
+		String quantityText = quantityDropdownElement.getText().trim();
+		System.out.println("Quantity text retrieved: " + quantityText);
+
+		try {
+			return Integer.parseInt(quantityText);
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Failed to parse quantity: " + quantityText);
+		}
+		*/
+
+		  Select quantityDropdown = new Select(quantityDropdownElement); 
+		  String selectedValue = quantityDropdown.getFirstSelectedOption().getText(); 
+		  return Integer.parseInt(quantityDropdownElement.getText());
+		 
 	}
 
 	public void removeProductFromCart() {
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//	    wait.until(ExpectedConditions.visibilityOfElementLocated(deleteButton));
-		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(deleteButton));
+
 		WebElement deleteButtons = driver.findElement(deleteButton);
 		deleteButtons.click();
 	}
