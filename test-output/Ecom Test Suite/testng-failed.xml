@@ -7,7 +7,6 @@
         <methods>
           <include name="testUpdateProductQuantityInCart"/>
           <include name="tearDown"/>
-          <include name="testAddProductToCart"/>
           <include name="setup"/>
           <include name="testRemoveProductFromCart"/>
         </methods>

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,11 +101,6 @@
                       <a href="#" panel-name="suite-Ecom_Test_Suite" class="show-methods failed suite-Ecom_Test_Suite"> (show)</a> <!-- show-methods failed suite-Ecom_Test_Suite -->
                     </span>
                     <div class="method-list-content failed suite-Ecom_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Ecom_Test_Suite" title="com.tests.EcommerceTests" class="method navigator-link" hash-for-method="testAddProductToCart">testAddProductToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Ecom_Test_Suite" title="com.tests.EcommerceTests" class="method navigator-link" hash-for-method="testRemoveProductFromCart">testRemoveProductFromCart</a> <!-- method navigator-link -->
@@ -117,25 +112,6 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Ecom_Test_Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Ecom_Test_Suite" class="hide-methods passed suite-Ecom_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Ecom_Test_Suite -->
-                      <a href="#" panel-name="suite-Ecom_Test_Suite" class="show-methods passed suite-Ecom_Test_Suite"> (show)</a> <!-- show-methods passed suite-Ecom_Test_Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Ecom_Test_Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Ecom_Test_Suite" title="com.tests.EcommerceTests" class="method navigator-link" hash-for-method="testSearchExistingProduct">testSearchExistingProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Ecom_Test_Suite" title="com.tests.EcommerceTests" class="method navigator-link" hash-for-method="testSearchNonExistingProduct">testSearchNonExistingProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Ecom_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -155,30 +131,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddProductToCart">
-                  </a> <!-- testAddProductToCart -->
-                  <span class="method-name">testAddProductToCart</span>
-                  <div class="stack-trace">java.lang.AssertionError: Product should be added to the cart expected [true] but found [false]
-	at com.tests.EcommerceTests.testAddProductToCart(EcommerceTests.java:39)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testRemoveProductFromCart">
                   </a> <!-- testRemoveProductFromCart -->
                   <span class="method-name">testRemoveProductFromCart</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Delete&apos;]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;img[alt=&apos;Delete&apos;]&quot;}
   (Session info: chrome=127.0.6533.100)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a87d1194985f351567fc0136af41f4f1, findElement {value=//input[@value=&apos;Delete&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\Panchal\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53472}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53472/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a87d1194985f351567fc0136af41f4f1
+Command: [8c5f4e2bd0736ca4ab2a1f4391486253, findElement {value=img[alt=&apos;Delete&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\Panchal\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64396/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c5f4e2bd0736ca4ab2a1f4391486253
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -190,8 +154,8 @@ Session ID: a87d1194985f351567fc0136af41f4f1
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.pages.CartPage.removeProductFromCart(CartPage.java:26)
-	at com.tests.EcommerceTests.testRemoveProductFromCart(EcommerceTests.java:64)
+	at com.pages.CartPage.removeProductFromCart(CartPage.java:51)
+	at com.tests.EcommerceTests.testRemoveProductFromCart(EcommerceTests.java:67)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
@@ -208,9 +172,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5dede4778c9b9cb96e423d5b0048a026, findElement {value=quantity, using=name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\Panchal\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53644}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53644/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5dede4778c9b9cb96e423d5b0048a026
+Command: [f9975aeca8888c5583659da20dc6325c, findElement {value=quantity, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\Panchal\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64466}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64466/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f9975aeca8888c5583659da20dc6325c
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -222,8 +186,8 @@ Session ID: 5dede4778c9b9cb96e423d5b0048a026
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.pages.CartPage.updateProductQuantity(CartPage.java:22)
-	at com.tests.EcommerceTests.testUpdateProductQuantityInCart(EcommerceTests.java:51)
+	at com.pages.CartPage.updateProductQuantity(CartPage.java:35)
+	at com.tests.EcommerceTests.testUpdateProductQuantityInCart(EcommerceTests.java:54)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
@@ -231,28 +195,6 @@ Session ID: 5dede4778c9b9cb96e423d5b0048a026
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Ecom_Test_Suite-class-failed -->
-          <div class="suite-Ecom_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.tests.EcommerceTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSearchExistingProduct">
-                  </a> <!-- testSearchExistingProduct -->
-                  <span class="method-name">testSearchExistingProduct</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSearchNonExistingProduct">
-                  </a> <!-- testSearchNonExistingProduct -->
-                  <span class="method-name">testSearchNonExistingProduct</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Ecom_Test_Suite-class-passed -->
         </div> <!-- panel Ecom_Test_Suite -->
         <div panel-name="test-xml-Ecom_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -305,32 +247,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testUpdateProductQuantityInCart')
+data.setCell(0, 1, 'testRemoveProductFromCart')
 data.setCell(0, 2, 'com.tests.EcommerceTests')
-data.setCell(0, 3, 5262);
+data.setCell(0, 3, 6199);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testAddProductToCart')
+data.setCell(1, 1, 'testUpdateProductQuantityInCart')
 data.setCell(1, 2, 'com.tests.EcommerceTests')
-data.setCell(1, 3, 5095);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSearchExistingProduct')
-data.setCell(2, 2, 'com.tests.EcommerceTests')
-data.setCell(2, 3, 5069);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testRemoveProductFromCart')
-data.setCell(3, 2, 'com.tests.EcommerceTests')
-data.setCell(3, 3, 4741);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testSearchNonExistingProduct')
-data.setCell(4, 2, 'com.tests.EcommerceTests')
-data.setCell(4, 3, 2922);
+data.setCell(1, 3, 6179);
 window.suiteTableData['Ecom_Test_Suite']= { tableData: data, tableDiv: 'times-div-Ecom_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Ecom_Test_Suite">
               </div> <!-- times-div-Ecom_Test_Suite -->
             </div> <!-- times-div -->
@@ -345,9 +275,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Ecom_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tests.EcommerceTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testAddProductToCart</span>
+                <br/>
+                <span class="ignored-method-name">testSearchNonExistingProduct</span>
+                <br/>
+                <span class="ignored-method-name">testSearchExistingProduct</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Ecom_Test_Suite" class="panel">
@@ -364,64 +305,26 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testAddProductToCart</span>
-                <span class="method-start">8604 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">13709 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">14266 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testRemoveProductFromCart</span>
-                <span class="method-start">19864 ms</span>
+                <span class="method-start">6793 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24620 ms</span>
+                <span class="method-start">13008 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">25207 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSearchExistingProduct</span>
-                <span class="method-start">29694 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">34766 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">35392 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSearchNonExistingProduct</span>
-                <span class="method-start">39699 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">42623 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">43068 ms</span>
+                <span class="method-start">13824 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testUpdateProductQuantityInCart</span>
-                <span class="method-start">47987 ms</span>
+                <span class="method-start">18122 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">53256 ms</span>
+                <span class="method-start">24308 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
