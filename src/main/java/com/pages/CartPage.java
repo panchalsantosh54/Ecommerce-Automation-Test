@@ -11,9 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CartPage extends BasePage {
 
-	private By cartQuantityDropdown = By.xpath("//span[@class='a-button-text a-declarative']");
-	private By cartItemCount = By.cssSelector("span[id='nav-cart-count']");
-	private By deleteButton = By.cssSelector("img[alt='Delete']");
+	private By cartQuantityDropdown = By.xpath("//select[@class='a-native-dropdown a-declarative sc-update-quantity-select']");
+	private By cartItemCount = By.xpath("//div[@id='nav-cart-count-container']/span[1]");
+	private By deleteButton = By.xpath("//input[@value='Delete']");
+	private By subTotalItem = By.xpath("//span[@id='sc-subtotal-label-buybox']");
 
 	public CartPage(WebDriver driver) {
 		super(driver);
@@ -32,33 +33,25 @@ public class CartPage extends BasePage {
 	public void updateProductQuantity(int quantity) {
 //		driver.findElement(cartQuantityDropdown).sendKeys(String.valueOf(quantity));
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(cartItemCount));
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cartQuantityDropdown));
+		
 		WebElement quantityDropdownElement = driver.findElement(cartQuantityDropdown);
 		quantityDropdownElement.click();
-
+		
+		Select dropdown = new Select(quantityDropdownElement);
+		dropdown.selectByVisibleText("2");
+		
 		/*
-		 * Select quantityDropdown = new Select(quantityDropdownElement);
-		 * quantityDropdown.selectByValue(String.valueOf(quantity));
-		 */
-//		quantityDropdown.selectByVisibleText(String.valueOf(quantity));
+		Thread.sleep(1500);
+		String cartText = driver.findElement(By.xpath("//span[@id='sc-subtotal-label-buybox']")).getText();
+		Assert.assertTrue(cartText.contains("Subtotal (2 items)"));
+		*/
+
 	}
 
 	public int getProductQuantity() {
 		WebElement quantityDropdownElement = driver.findElement(cartQuantityDropdown);
-		
-		/*
-		String quantityText = quantityDropdownElement.getText().trim();
-		System.out.println("Quantity text retrieved: " + quantityText);
-
-		try {
-			return Integer.parseInt(quantityText);
-		} catch (NumberFormatException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Failed to parse quantity: " + quantityText);
-		}
-		*/
 
 		  Select quantityDropdown = new Select(quantityDropdownElement); 
 		  String selectedValue = quantityDropdown.getFirstSelectedOption().getText(); 
@@ -66,10 +59,11 @@ public class CartPage extends BasePage {
 		 
 	}
 
-	public void removeProductFromCart() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	public void removeProductFromCart() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(deleteButton));
 
+		Thread.sleep(5000l);
 		WebElement deleteButtons = driver.findElement(deleteButton);
 		deleteButtons.click();
 	}

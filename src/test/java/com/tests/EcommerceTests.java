@@ -1,5 +1,6 @@
 package com.tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -43,7 +44,7 @@ public class EcommerceTests extends BaseTest {
 	}
 
 	@Test
-	public void testUpdateProductQuantityInCart() {
+	public void testUpdateProductQuantityInCart()  {
 		HomePage homePage = new HomePage(driver);
 		homePage.searchForProduct("Laptop");
 
@@ -52,11 +53,14 @@ public class EcommerceTests extends BaseTest {
 
 		CartPage cartPage = new CartPage(driver);
 		cartPage.updateProductQuantity(2);
+		
+//		Assert.assertTrue(subTotalItem.contains("Subtotal (2 items)"));
+		
 		Assert.assertTrue(cartPage.getProductQuantity() == 2, "Cart should reflect the updated quantity");
 	}
 
-	@Test(enabled=false)
-	public void testRemoveProductFromCart() {
+	@Test
+	public void testRemoveProductFromCart() throws InterruptedException {
 		HomePage homePage = new HomePage(driver);
 		homePage.searchForProduct("Laptop");
 

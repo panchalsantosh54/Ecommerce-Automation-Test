@@ -8,6 +8,7 @@
           <include name="testUpdateProductQuantityInCart"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="testRemoveProductFromCart"/>
         </methods>
       </class> <!-- com.tests.EcommerceTests -->
     </classes>
