@@ -10,7 +10,7 @@ import com.pages.SearchResultsPage;
 
 public class EcommerceTests extends BaseTest {
 
-	@Test(enabled=false)
+	@Test
 	public void testSearchNonExistingProduct() {
 		HomePage homePage = new HomePage(driver);
 		homePage.searchForProduct("ld345tsxslfer");
